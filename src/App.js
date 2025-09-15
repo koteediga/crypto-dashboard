@@ -1,14 +1,16 @@
-import React from 'react';
-import AllCoinsView from './components/AllCoinsView';
-import Highlights from './components/Highlights';
+import React, { useState } from "react";
+import Highlights from "./components/Highlights";
+import AllCoinsView from "./components/AllCoinsView";
+import CoinDetailsModal from "./components/CoinDetailsModal";
 
 function App() {
+  const [selectedCoinId, setSelectedCoinId] = useState(null);
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <h1>Crypto Dashboard</h1>
       <Highlights />
-      <hr style={{ margin: '20px 0' }} />
-      <AllCoinsView />
+      <AllCoinsView onRowClick={setSelectedCoinId} />
+      {selectedCoinId && <CoinDetailsModal coinId={selectedCoinId} onClose={() => setSelectedCoinId(null)} />}
     </div>
   );
 }

@@ -1,0 +1,23 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fafbfc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  input, button, select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  .coins-table th, .coins-table td {
+    padding: 8px 10px;
+  }
+  .coins-table th {
+    background: #f0f2f4;
+  }
+  
+  .coins-table tr:hover {
+    background: #f8fafd;
+  }
+  
