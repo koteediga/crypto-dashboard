@@ -1,23 +1,50 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #fafbfc;
-    margin: 0;
-    padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f6;
+}
+
+input[type="text"] {
+  border: 1.5px solid #d1d5db;
+  border-radius: 7px;
+  padding: 0.7em 1em;
+  font-size: 1.06rem;
+  background: #f9fafc;
+  margin-bottom: 16px;
+  transition: border 0.2s;
+}
+input[type="text"]:focus {
+  border-color: #47a1ff;
+  outline: none;
+}
+
+.coins-table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+.coins-table th {
+  background: #f4f7fb;
+  font-weight: 700;
+  color: #334155;
+  font-size: 1.008rem;
+  padding: 10px 12px;
+}
+
+.coins-table td {
+  background: #fff;
+  border-radius: 6px;
+  vertical-align: middle;
+  padding: 10px 12px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.01);
+}
+
+.coins-table tr:hover td {
+  background: #f1f9ff;
+}
+
+@media (max-width: 900px) {
+  .coins-table, .coins-table th, .coins-table td {
+    font-size: 0.94rem;
+    padding: 8px 8px;
   }
-  
-  input, button, select {
-    font-family: inherit;
-    font-size: inherit;
-  }
-  
-  .coins-table th, .coins-table td {
-    padding: 8px 10px;
-  }
-  .coins-table th {
-    background: #f0f2f4;
-  }
-  
-  .coins-table tr:hover {
-    background: #f8fafd;
-  }
-  
+}
