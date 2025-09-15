@@ -15,6 +15,7 @@ const api = axios.create({
   timeout: 10000,
 });
 
+
 // Coins Markets
 export const fetchCoinsMarkets = async (page = 1, perPage = 50) => {
   try {
